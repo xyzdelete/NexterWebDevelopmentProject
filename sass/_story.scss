@@ -13,6 +13,10 @@
             ),
             url("../img/back.jpg");
         background-size: cover;
+
+        @media only screen and (max-width: $bp-large) {
+            grid-column: 1 / -1;
+        }
     }
 
     &__img--1 {
@@ -20,6 +24,12 @@
         grid-row: 2 / 6;
         grid-column: 2 / 6;
         box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+        border-radius: 2px;
+        transition: all 0.4s;
+        &:hover {
+            transform: scale(1.05);
+            z-index: 22;
+        }
     }
 
     &__img--2 {
@@ -28,6 +38,16 @@
         grid-row: 4 / 6;
         z-index: 20;
         box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+
+        transition: all 0.2s;
+        @media only screen and (max-width: $bp-large) {
+            width: 100%;
+        }
+        border-radius: 2px;
+
+        &:hover {
+            transform: scale(1.05);
+        }
     }
 
     &__content {
@@ -44,11 +64,27 @@
         display: grid;
         align-content: center;
         justify-items: start;
+
+        @media only screen and (max-width: $bp-large) {
+            grid-column: 1 / -1;
+        }
     }
 
     &__text {
         font-size: 1.5rem;
         font-style: italic;
         margin-bottom: 4rem;
+    }
+}
+
+.btn {
+    border-radius: 2px;
+    &:hover {
+        box-shadow: 0rem 2rem 4rem rgba($color-primary, 0.4);
+        transform: translateY(-5%);
+    }
+    &:active {
+        box-shadow: 0rem 1rem 2rem rgba($color-primary, 0.2);
+        transform: translateY(0);
     }
 }

@@ -23,6 +23,10 @@
         box-shadow: 0rem 3rem 5rem rgba($color-primary, 0.6);
     }
 
+    &__btn {
+        justify-self: stretch;
+    }
+
     &__img {
         width: 100%;
         grid-row: 1 / 2;
@@ -59,6 +63,7 @@
         font-weight: 400;
 
         transform: translateY(50%);
+        border-radius: 2px;
     }
 
     &__location,
@@ -71,11 +76,13 @@
     &__area,
     &__price {
         font-size: 1.5rem;
-        margin-left: 2rem;
 
         display: flex;
         align-items: center;
 
+        justify-content: flex-start;
+        margin-left: 3rem;
+        margin-right: auto;
         svg {
             fill: $color-primary;
             height: 2rem;
@@ -84,7 +91,10 @@
         }
     }
 
-    &__btn {
+    .btn {
         grid-column: 1 / -1;
+        border-radius: 0;
     }
+    border-radius: 2px;
+    overflow: hidden;
 }
